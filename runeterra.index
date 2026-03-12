@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index>
   <info>
+    <n>Races of Runeterra</n>
+    <description>Homebrew races from the D&amp;D5e League of Legends Campaign Handbook by Isa (@orkidian).</description>
     <update version="1.0">
       <file name="runeterra.index" url="https://raw.githubusercontent.com/SavernTheAnarchist/runeterra-races/main/runeterra.index" />
     </update>
