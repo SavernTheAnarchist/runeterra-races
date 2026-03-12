@@ -481,7 +481,7 @@
     <rules>
       <stat name="dexterity" value="1" />
       <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_TAVERN_BRAWLER_BILGEWATER" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_WATER" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_BILGEWATER_VEHICLES" />
       <select type="Language" name="Regional Language (Bilgewater)" supports="Starting Language" />
     </rules>
   </element>
@@ -642,11 +642,7 @@
   </element>
   <element name="Inventor's Gadgets" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_INVENTORS_GADGETS">
     <description><p>You are proficient with Tinker's Tools and one other artisan's tool of your choice.</p></description>
-    <sheet display="false" />
-    <rules>
-      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS" />
-      <select type="Proficiency" name="Artisan's Tool (Inventor)" supports="Artisan tools" />
-    </rules>
+    <sheet><description>Proficient with Tinker's Tools and one additional artisan's tool of your choice (ask your DM to note it).</description></sheet>
   </element>
 
   <!-- Shuriman Human -->
@@ -984,9 +980,7 @@
     <rules>
       <stat name="strength" value="1" />
       <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_ARCTIC_TERRAIN_FROST_TROLL" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MAUL" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_WARPICK" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_WARHAMMER" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_FROST_TROLL_WEAPONS" />
     </rules>
   </element>
   <element name="Arctic Terrain Familiarity (Frost-Troll)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_ARCTIC_TERRAIN_FROST_TROLL">
@@ -1007,9 +1001,7 @@
     <rules>
       <stat name="dexterity" value="1" />
       <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_DESERT_TERRAIN_SAND_TROLL" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_GREATAXE" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MORNINGSTAR" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SCIMITAR" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_SAND_TROLL_WEAPONS" />
     </rules>
   </element>
   <element name="Desert Terrain Familiarity (Sand-Troll)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_DESERT_TERRAIN_SAND_TROLL">
@@ -1114,9 +1106,7 @@
       <stat name="charisma" value="1" />
       <stat name="innate speed:swim" value="30" bonus="base" />
       <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_AMPHIBIOUS_VASTAYA" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SPEAR" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_TRIDENT" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_NET" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_SEA_WEAPON_TRAINING" />
       <grant type="Spell" id="ID_RUNETERRA_SPELL_SHAPE_WATER" spellcasting="Race" known="true" />
     </rules>
   </element>
@@ -1247,6 +1237,38 @@
       <set name="isConcentration">false</set>
       <set name="isRitual">false</set>
     </setters>
+  </element>
+
+  <!-- ==================== WEAPON/TOOL PROFICIENCY TRAITS ==================== -->
+  <!-- Defined as text traits to avoid dependency on potentially misnamed proficiency IDs -->
+
+  <element name="Frost-Troll Weapon Training" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_FROST_TROLL_WEAPONS">
+    <description><p>You have proficiency with mauls, war picks, and warhammers.</p></description>
+    <sheet><description>Proficient with mauls, war picks, and warhammers.</description></sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+    </rules>
+  </element>
+
+  <element name="Sand-Troll Weapon Training" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_SAND_TROLL_WEAPONS">
+    <description><p>You have proficiency with greataxes, morningstars, and scimitars.</p></description>
+    <sheet><description>Proficient with greataxes, morningstars, and scimitars.</description></sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+    </rules>
+  </element>
+
+  <element name="Sea Weapon Training" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_SEA_WEAPON_TRAINING">
+    <description><p>You have proficiency with spears, tridents, and nets.</p></description>
+    <sheet><description>Proficient with spears, tridents, and nets.</description></sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" />
+    </rules>
+  </element>
+
+  <element name="Water Vehicle Proficiency" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_BILGEWATER_VEHICLES">
+    <description><p>You are proficient with water vehicles.</p></description>
+    <sheet><description>Proficient with water vehicles.</description></sheet>
   </element>
 
 </elements>
