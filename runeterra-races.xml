@@ -269,7 +269,6 @@
     <description><p>You have immunity to radiant damage.</p></description>
     <sheet><description>You are immune to radiant damage.</description></sheet>
     <rules>
-      <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_RADIANT" />
     </rules>
   </element>
 
@@ -325,7 +324,6 @@
     <description><p>Immune to disease. No need to eat, drink, or breathe. Instead of sleeping, enter an inactive state for 4 hours each day. You are fully aware of surroundings and notice approaching enemies during this state.</p></description>
     <sheet><description>Immune to disease. No need to eat, drink, or breathe. Rest in an inactive state for 4 hours instead of sleeping, remaining fully aware.</description></sheet>
     <rules>
-      <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_DISEASE" requirements="false"/>
     </rules>
   </element>
 
@@ -740,8 +738,8 @@
     <description><p>You know Sapping Sting (cantrip). At 3rd level: Toll the Dead (cantrip). At 5th level: Arms of Hadar 1/day (no slot). Wisdom is your spellcasting ability.</p></description>
     <sheet><description>Cantrip: Sapping Sting. At 3rd level: Toll the Dead. At 5th level: Arms of Hadar once/day (no slot). Spellcasting ability: Wisdom.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_EGW_SPELL_SAPPING_STING" spellcasting="Race" known="true" />
-      <grant type="Spell" id="ID_WOTC_XGTE_SPELL_TOLL_THE_DEAD" spellcasting="Race" known="true" level="3" />
+      <grant type="Spell" id="ID_RUNETERRA_SPELL_SAPPING_STING" spellcasting="Race" known="true" />
+      <grant type="Spell" id="ID_RUNETERRA_SPELL_TOLL_THE_DEAD" spellcasting="Race" known="true" level="3" />
       <grant type="Spell" id="ID_PHB_SPELL_ARMS_OF_HADAR" spellcasting="Race" known="true" level="5" />
     </rules>
   </element>
@@ -877,7 +875,10 @@
   <element name="Demonic Darkvision" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_DEMONIC_DARKVISION">
     <description><p>Darkvision 120 feet.</p></description>
     <sheet display="false" />
-    <rules><grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" /></rules>
+    <rules>
+      <grant type="Vision" id="ID_VISION_DARKVISION" />
+      <stat name="darkvision:range" value="120" bonus="base" />
+    </rules>
   </element>
   <element name="Light Aversion" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_LIGHT_AVERSION">
     <description><p>You are vulnerable to radiant damage.</p></description>
@@ -1116,7 +1117,7 @@
       <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SPEAR" />
       <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_TRIDENT" />
       <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_NET" />
-      <grant type="Spell" id="ID_XGTE_SPELL_SHAPE_WATER" spellcasting="Race" known="true" />
+      <grant type="Spell" id="ID_RUNETERRA_SPELL_SHAPE_WATER" spellcasting="Race" known="true" />
     </rules>
   </element>
   <element name="Amphibious (Vastaya)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_AMPHIBIOUS_VASTAYA">
@@ -1139,12 +1140,113 @@
       <stat name="dexterity" value="1" />
       <stat name="innate speed:fly" value="30" bonus="base" />
       <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_TALONS_SKY" />
-      <grant type="Spell" id="ID_XGTE_SPELL_GUST" spellcasting="Race" known="true" />
+      <grant type="Spell" id="ID_RUNETERRA_SPELL_GUST" spellcasting="Race" known="true" />
     </rules>
   </element>
   <element name="Talons (Tribes of the Sky)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_TALONS_SKY">
     <description><p>You have talons that serve as natural weapons. Unarmed strikes deal 1d4+DEX slashing damage.</p></description>
     <sheet><description>Unarmed strikes with talons deal 1d4 + DEX slashing damage.</description></sheet>
+  </element>
+
+  <!-- ==================== SELF-CONTAINED SPELLS ==================== -->
+  <!-- Defined here so the file works without XGTE or EGW being loaded -->
+
+  <element name="Sapping Sting" type="Spell" source="Races of Runeterra" id="ID_RUNETERRA_SPELL_SAPPING_STING">
+    <supports>Runeterra Race Spell</supports>
+    <description>
+      <p>You sap the vitality of one creature you can see within range. The target must succeed on a Constitution saving throw or take 1d4 necrotic damage and fall prone.</p>
+      <p class="indent">This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).</p>
+    </description>
+    <setters>
+      <set name="keywords">necrotic</set>
+      <set name="level">0</set>
+      <set name="school">Necromancy</set>
+      <set name="time">1 action</set>
+      <set name="duration">Instantaneous</set>
+      <set name="range">30 feet</set>
+      <set name="hasVerbalComponent">true</set>
+      <set name="hasSomaticComponent">true</set>
+      <set name="hasMaterialComponent">false</set>
+      <set name="materialComponent" />
+      <set name="isConcentration">false</set>
+      <set name="isRitual">false</set>
+    </setters>
+  </element>
+
+  <element name="Toll the Dead" type="Spell" source="Races of Runeterra" id="ID_RUNETERRA_SPELL_TOLL_THE_DEAD">
+    <supports>Runeterra Race Spell</supports>
+    <description>
+      <p>You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage.</p>
+      <p class="indent">This spell's damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12).</p>
+    </description>
+    <setters>
+      <set name="keywords">necrotic</set>
+      <set name="level">0</set>
+      <set name="school">Necromancy</set>
+      <set name="time">1 action</set>
+      <set name="duration">Instantaneous</set>
+      <set name="range">60 feet</set>
+      <set name="hasVerbalComponent">true</set>
+      <set name="hasSomaticComponent">true</set>
+      <set name="hasMaterialComponent">false</set>
+      <set name="materialComponent" />
+      <set name="isConcentration">false</set>
+      <set name="isRitual">false</set>
+    </setters>
+  </element>
+
+  <element name="Shape Water" type="Spell" source="Races of Runeterra" id="ID_RUNETERRA_SPELL_SHAPE_WATER">
+    <supports>Runeterra Race Spell</supports>
+    <description>
+      <p>You choose an area of water that fits within a 5-foot cube within range. You manipulate it in one of the following ways:</p>
+      <ul>
+        <li>You instantaneously move or otherwise change the flow of the water as you direct, up to 5 feet in any direction. This movement doesn't have enough force to cause damage.</li>
+        <li>You cause the water to form into simple shapes and animate at your direction. This change lasts for 1 hour.</li>
+        <li>You change the water's color or opacity. The water must be changed in the same way throughout. This change lasts for 1 hour.</li>
+        <li>You freeze the water, provided there are no creatures in it. The water unfreezes in 1 hour.</li>
+      </ul>
+      <p class="indent">If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.</p>
+    </description>
+    <setters>
+      <set name="keywords">water</set>
+      <set name="level">0</set>
+      <set name="school">Transmutation</set>
+      <set name="time">1 action</set>
+      <set name="duration">Instantaneous or 1 hour</set>
+      <set name="range">30 feet</set>
+      <set name="hasVerbalComponent">false</set>
+      <set name="hasSomaticComponent">true</set>
+      <set name="hasMaterialComponent">false</set>
+      <set name="materialComponent" />
+      <set name="isConcentration">false</set>
+      <set name="isRitual">false</set>
+    </setters>
+  </element>
+
+  <element name="Gust" type="Spell" source="Races of Runeterra" id="ID_RUNETERRA_SPELL_GUST">
+    <supports>Runeterra Race Spell</supports>
+    <description>
+      <p>You seize the air and compel it to create one of the following effects at a point you can see within range:</p>
+      <ul>
+        <li>One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you.</li>
+        <li>You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you. It isn't pushed with enough force to cause damage.</li>
+        <li>You create a harmless sensory affect using air, such as causing leaves to rustle, wind to slam shutters closed, or your clothing to ripple in a breeze.</li>
+      </ul>
+    </description>
+    <setters>
+      <set name="keywords">air, wind</set>
+      <set name="level">0</set>
+      <set name="school">Transmutation</set>
+      <set name="time">1 action</set>
+      <set name="duration">Instantaneous</set>
+      <set name="range">30 feet</set>
+      <set name="hasVerbalComponent">true</set>
+      <set name="hasSomaticComponent">true</set>
+      <set name="hasMaterialComponent">false</set>
+      <set name="materialComponent" />
+      <set name="isConcentration">false</set>
+      <set name="isRitual">false</set>
+    </setters>
   </element>
 
 </elements>
