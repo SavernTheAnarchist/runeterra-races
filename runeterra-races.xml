@@ -4,7 +4,9 @@
     <name>D&amp;D5e League of Legends: Races of Runeterra</name>
     <description>Homebrew races from the D&amp;D5e League of Legends Campaign Handbook by Isa (@orkidian). Fan-made content, not affiliated with Riot Games or Wizards of the Coast.</description>
     <author url="">Isa (@orkidian)</author>
-    <update version="1.2.1" />
+    <update version="1.2.1">
+      <file name="runeterra-races.xml" url="https://raw.githubusercontent.com/SavernTheAnarchist/runeterra-races/main/runeterra-races.xml" />
+    </update>
   </info>
 
   <!-- ==================== SOURCE ==================== -->
