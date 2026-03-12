@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+  <info>
+    <name>D&amp;D5e League of Legends: Races of Runeterra</name>
+    <description>Homebrew races from the D&amp;D5e League of Legends Campaign Handbook by Isa (@orkidian). Fan-made content, not affiliated with Riot Games or Wizards of the Coast.</description>
+    <author url="">Isa (@orkidian)</author>
+    <update version="1.2.1" />
+  </info>
+
+  <!-- ==================== SOURCE ==================== -->
+  <element name="Races of Runeterra" type="Source" source="Races of Runeterra" id="ID_RUNETERRA_SOURCE">
+    <description>
+      <p>Homebrew races from the D&amp;D5e League of Legends Campaign Handbook by Isa (@orkidian). Fan-made, non-commercial content.</p>
+    </description>
+    <setters>
+      <set name="abbreviation">RoR</set>
+      <set name="url"></set>
+      <set name="image"></set>
+      <set name="release">20220101</set>
+      <set name="official">false</set>
+      <set name="supplement">false</set>
+      <set name="homebrew">true</set>
+      <set name="league">false</set>
+      <set name="third-party">false</set>
+    </setters>
+  </element>
+
+  <!-- ==================== LANGUAGES ==================== -->
+  <element name="Va-Nox" type="Language" source="Races of Runeterra" id="ID_RUNETERRA_LANGUAGE_VANOX">
+    <supports>Starting Language</supports>
+    <description><p>The common tongue of Runeterra, spoken across its many regions.</p></description>
+    <setters>
+      <set name="exotic">false</set>
+      <set name="speakers">Peoples of Runeterra</set>
+      <set name="script">Va-Nox</set>
+    </setters>
+  </element>
+  <element name="Ancient Shuriman" type="Language" source="Races of Runeterra" id="ID_RUNETERRA_LANGUAGE_ANCIENT_SHURIMAN">
+    <supports>Starting Language</supports>
+    <description><p>The ancient language of the Shuriman Empire.</p></description>
+    <setters><set name="exotic">true</set><set name="speakers">Ascended, scholars</set><set name="script">Shuriman</set></setters>
+  </element>
+  <element name="Modern Shuriman" type="Language" source="Races of Runeterra" id="ID_RUNETERRA_LANGUAGE_MODERN_SHURIMAN">
+    <supports>Starting Language</supports>
+    <description><p>The contemporary language of the Shuriman desert people.</p></description>
+    <setters><set name="exotic">false</set><set name="speakers">Shurimans</set><set name="script">Shuriman</set></setters>
+  </element>
+  <element name="Targonian" type="Language" source="Races of Runeterra" id="ID_RUNETERRA_LANGUAGE_TARGONIAN">
+    <supports>Starting Language</supports>
+    <description><p>The language of the tribes surrounding Mount Targon.</p></description>
+    <setters><set name="exotic">false</set><set name="speakers">Targonians</set><set name="script">Targonian</set></setters>
+  </element>
+  <element name="Celestial (Runeterra)" type="Language" source="Races of Runeterra" id="ID_RUNETERRA_LANGUAGE_CELESTIAL">
+    <supports>Starting Language</supports>
+    <description><p>The melodic but incomprehensible language of the Celestials.</p></description>
+    <setters><set name="exotic">true</set><set name="speakers">Celestials</set><set name="script">Celestial</set></setters>
+  </element>
+  <element name="Sylvan (Runeterra)" type="Language" source="Races of Runeterra" id="ID_RUNETERRA_LANGUAGE_SYLVAN">
+    <supports>Starting Language</supports>
+    <description><p>The language of the Spirit Realm.</p></description>
+    <setters><set name="exotic">true</set><set name="speakers">Spirits</set><set name="script">Sylvan</set></setters>
+  </element>
+  <element name="Vastayan" type="Language" source="Races of Runeterra" id="ID_RUNETERRA_LANGUAGE_VASTAYAN">
+    <supports>Starting Language</supports>
+    <description><p>The language of the vastaya, with many tribal dialects.</p></description>
+    <setters><set name="exotic">false</set><set name="speakers">Vastaya</set><set name="script">Vastayan</set></setters>
+  </element>
+
+  <!-- ==================== ASCENDED ==================== -->
+  <element name="Ascended" type="Race" source="Races of Runeterra" id="ID_RUNETERRA_RACE_ASCENDED">
+    <description>
+      <p>Transformed by an ancient, divine disc or merged with a celestial power, the Ascended are elevated beyond their mortal states into legendary, powerful beings. Physically, they are indelibly evolved, made more powerful, more swift, and more resilient.</p>
+      <h4>Ascended Traits</h4>
+      <p><strong>Ability Score Increase.</strong> Your Dexterity score increases by 2.</p>
+      <p><strong>Age.</strong> After Ascension, aging slows drastically — lifespans span millennia.</p>
+      <p><strong>Alignment.</strong> The Ascended are rarely totally neutral. Targonian Ascended tend toward good; Darkin tend toward evil.</p>
+      <p><strong>Size.</strong> Ascended vary from about 5 feet to over 7 feet tall. Your size is Medium.</p>
+      <p><strong>Speed.</strong> Your base walking speed is 30 feet.</p>
+      <p><strong>Ascended Endurance.</strong> When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.</p>
+      <p><strong>Languages.</strong> You can speak, read, and write Va-Nox.</p>
+      <p><strong>Subrace.</strong> Choose Shuriman Ascended, Targonian Ascended, or Darkin.</p>
+    </description>
+    <sheet display="false" />
+    <setters>
+      <set name="names" type="male">Az'ravi, Bahatek, Esh'kai, Ishtaka, Nacrath, Nixa, Retekta, Sek'riza, Xeyush</set>
+      <set name="names" type="female">Aalrut, Ceheltox, Khaal, Ma'almar, Nek'xast, Rhelaas, Seltaava, Shalteeya, Taltarus</set>
+      <set name="names-format">{{name}}</set>
+      <set name="height" modifier="2d10">4'8"</set>
+      <set name="weight" modifier="2d4">110 lb.</set>
+    </setters>
+    <rules>
+      <stat name="dexterity" value="2" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_VANOX" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_ASCENDED_ENDURANCE" />
+      <select type="Sub Race" name="Ascended Subrace" supports="Ascended" />
+    </rules>
+  </element>
+
+  <element name="Ascended Endurance" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_ASCENDED_ENDURANCE">
+    <description><p>When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.</p></description>
+    <sheet action="Reaction" usage="1/Long Rest">
+      <description>When reduced to 0 hp but not killed outright, you drop to 1 hp instead.</description>
+    </sheet>
+  </element>
+
+  <!-- Shuriman Ascended Subrace -->
+  <element name="Shuriman Ascended" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_SHURIMAN_ASCENDED">
+    <supports>Ascended</supports>
+    <description>
+      <p>Shuriman warriors of exceptional loyalty transformed by the Sun Disc of Shurima, merged with an animalistic spirit.</p>
+      <p><strong>Ability Score Increase.</strong> Your Constitution score increases by 1.</p>
+      <p><strong>Blessing of the Sun Disc.</strong> Select one blessing: Ascended Fury, Ghost of the Soldier, or Life Siphon (work with your DM).</p>
+      <p><strong>Desert Terrain Familiarity.</strong> In desert terrain, you gain advantage on Wisdom (Survival) checks and are not hindered by difficult terrain.</p>
+      <p><strong>Extra Languages.</strong> You can speak, read, and write Ancient Shuriman and Modern Shuriman.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="constitution" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_BLESSING_SUN_DISC" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_DESERT_TERRAIN_SHURIMAN_ASC" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_ANCIENT_SHURIMAN" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_MODERN_SHURIMAN" />
+    </rules>
+  </element>
+
+  <element name="Blessing of the Sun Disc" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_BLESSING_SUN_DISC">
+    <description>
+      <p>The transformation has gifted you with a unique ability. Select one from the following or work with the DM:</p>
+      <p><em>Ascended Fury:</em> When landing an attack that deals bludgeoning, piercing, or slashing damage, you can deal an extra 1d6+STR damage (once per long rest). Scales to 1d10 at 5th, 1d12 at 10th, 2d12 at 15th level.</p>
+      <p><em>Ghost of the Soldier:</em> As a bonus action, conjure a Sand Soldier within 15 feet. It can make a melee spear attack for 1d6+DEX, uses your movement, and has 1d6+CHA hp. Dissolves after 1 minute or if you're more than 15 feet away. Once per long rest.</p>
+      <p><em>Life Siphon:</em> As an action, roll 1d6+CHA against a creature you can see. Remove that many hp from the target and add it to your own. Target may make DC 13 CON save for half effect. No effect on Constructs/Undead. Once per long rest.</p>
+    </description>
+    <sheet>
+      <description>You have a Blessing of the Sun Disc. Choose one: Ascended Fury (1d6+STR bonus damage, 1/long rest), Ghost of the Soldier (summon Sand Soldier, 1/long rest), or Life Siphon (drain 1d6+CHA hp from a target, 1/long rest). Damage dice scale at 5th, 10th, and 15th level.</description>
+    </sheet>
+  </element>
+
+  <element name="Desert Terrain Familiarity (Ascended)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_DESERT_TERRAIN_SHURIMAN_ASC">
+    <description><p>When traveling in desert terrain, you gain advantage on Wisdom (Survival) checks and are not hindered by difficult terrain.</p></description>
+    <sheet><description>Advantage on Wisdom (Survival) checks in desert terrain; not hindered by difficult terrain there.</description></sheet>
+  </element>
+
+  <!-- Targonian Ascended Subrace -->
+  <element name="Targonian Ascended" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_TARGONIAN_ASCENDED">
+    <supports>Ascended</supports>
+    <description>
+      <p>Those found worthy by Mount Targon and granted power by a stellar Aspect.</p>
+      <p><strong>Ability Score Increase.</strong> Your Charisma score increases by 1.</p>
+      <p><strong>Blessing of the Aspect.</strong> Select one blessing: Aspect of Destiny, Aspect of Health, Aspect of the Messenger, or Aspect of Revelry.</p>
+      <p><strong>Extra Language.</strong> You can speak, read, and write Targonian.</p>
+      <p><strong>Mountainous Terrain Familiarity.</strong> In mountainous terrain, you gain advantage on Wisdom (Survival) checks and are not hindered by difficult terrain.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="charisma" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_BLESSING_ASPECT" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_MOUNTAINOUS_TERRAIN_TARG_ASC" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_TARGONIAN" />
+    </rules>
+  </element>
+
+  <element name="Blessing of the Aspect" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_BLESSING_ASPECT">
+    <description>
+      <p>Choose one Aspect blessing:</p>
+      <p><em>Aspect of Destiny:</em> Out of combat, predict events of the next 3 in-game minutes. DM sets DC (10–20). Roll 1d20; on success, events happen as described. Once per short or long rest.</p>
+      <p><em>Aspect of Health:</em> As an action, heal yourself or a willing creature for 1d6+CHA. Scales to 1d10/1d12/2d12 at 5th/10th/15th level. Once per long rest.</p>
+      <p><em>Aspect of the Messenger:</em> Establish telepathic communication with any creature you've met, across any distance, for 5 minutes (Concentration). Once per long rest.</p>
+      <p><em>Aspect of Revelry:</em> Add +10 to a Charisma check or saving throw. Once per long rest.</p>
+    </description>
+    <sheet>
+      <description>You have a Blessing of the Aspect. Choose one: Aspect of Destiny, Aspect of Health (1d6+CHA healing, 1/long rest), Aspect of the Messenger (5-min telepathy, 1/long rest), or Aspect of Revelry (+10 to a Charisma check/save, 1/long rest).</description>
+    </sheet>
+  </element>
+
+  <element name="Mountainous Terrain Familiarity (Targonian Ascended)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_MOUNTAINOUS_TERRAIN_TARG_ASC">
+    <description><p>In mountainous terrain, you gain advantage on Wisdom (Survival) checks and are not hindered by difficult terrain.</p></description>
+    <sheet><description>Advantage on Wisdom (Survival) checks in mountainous terrain; not hindered by difficult terrain there.</description></sheet>
+  </element>
+
+  <!-- Darkin Subrace -->
+  <element name="Darkin" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_DARKIN">
+    <supports>Ascended</supports>
+    <description>
+      <p>Once god-warriors of the Shuriman Empire, Darkin are corrupted Ascended sealed within their weapons.</p>
+      <p><strong>Ability Score Increase.</strong> Your Strength score increases by 1.</p>
+      <p><strong>Blood Magic.</strong> As a bonus action, heal yourself for 1d6+CHA hp. Scales to d10/d12/d20 at 5th/10th/15th level. Once per long rest.</p>
+      <p><strong>Sealed Weapon.</strong> You are proficient with your sealed weapon. It must remain within 10 feet of you at all times.</p>
+      <p><strong>Vengeance of the Darkin.</strong> You critically hit on a 19 or 20 with your sealed weapon, and can roll one extra damage die on a critical hit.</p>
+      <p><strong>Extra Languages.</strong> You can speak, read, and write Ancient Shuriman and the native language of your mortal host.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_BLOOD_MAGIC" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_SEALED_WEAPON" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_VENGEANCE_DARKIN" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_ANCIENT_SHURIMAN" />
+    </rules>
+  </element>
+
+  <element name="Blood Magic" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_BLOOD_MAGIC">
+    <description><p>As a bonus action, you heal yourself for 1d6+CHA hit points. Scales to d10 at 5th, d12 at 10th, d20 at 15th level. Once per long rest.</p></description>
+    <sheet action="Bonus Action" usage="1/Long Rest">
+      <description>Heal yourself for 1d6+CHA hp (d10 at 5th level, d12 at 10th, d20 at 15th).</description>
+    </sheet>
+  </element>
+
+  <element name="Sealed Weapon" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_SEALED_WEAPON">
+    <description><p>You are inseparably tied to your weapon of choice and are proficient with it. The weapon must remain within 10 feet of you at all times.</p></description>
+    <sheet><description>You are proficient with your sealed weapon, which must remain within 10 feet of you at all times.</description></sheet>
+  </element>
+
+  <element name="Vengeance of the Darkin" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_VENGEANCE_DARKIN">
+    <description><p>Using your sealed weapon, you critically hit on a 19 or 20. When you critically hit with it, roll one of the weapon's damage dice one additional time and add it to the critical hit damage.</p></description>
+    <sheet><description>Critical hits with your sealed weapon occur on a 19–20. On a critical hit, roll one extra weapon damage die.</description></sheet>
+  </element>
+
+  <!-- ==================== CELESTIAL ==================== -->
+  <element name="Celestial (Runeterra)" type="Race" source="Races of Runeterra" id="ID_RUNETERRA_RACE_CELESTIAL">
+    <description>
+      <p>Older than the universe and just as powerful, Celestials cross the boundaries of mortal possibility. A select few descend into the mortal realm, sacrificing some of their sublimity to better interact with mortals.</p>
+      <h4>Celestial Traits</h4>
+      <p><strong>Ability Score Increase.</strong> Your Wisdom score increases by 2, and your Charisma score increases by 1.</p>
+      <p><strong>Age.</strong> Celestials are ageless, but can be destroyed in the physical realm.</p>
+      <p><strong>Alignment.</strong> Celestials tend toward lawful and/or good.</p>
+      <p><strong>Size.</strong> Medium.</p>
+      <p><strong>Speed.</strong> 30 feet.</p>
+      <p><strong>Celestial Knowledge.</strong> Proficiency in History and Religion.</p>
+      <p><strong>Radiant-Born.</strong> Immunity to radiant damage.</p>
+      <p><strong>Sacrificial Healing.</strong> As a bonus action, take from your own hp to heal a willing creature you can see. Roll 1d4 (optionally add WIS modifier). You lose that many hp; the target gains them. Scales to 1d6/1d8/1d10 at 5th/10th/15th. Once per short or long rest.</p>
+      <p><strong>Sacrificial Shielding.</strong> As a reaction, redirect half of the damage a creature you can see takes to yourself. Once per short or long rest.</p>
+      <p><strong>Languages.</strong> Va-Nox and Celestial.</p>
+    </description>
+    <sheet display="false" />
+    <setters>
+      <set name="names">Aktia Sial, Dusara, Fyrses, Govias Ma, Ildos, Lynir, Muockthos, Nydis, Phaara Nayin, Ulone, Vophin Sey, Xeytzin, Zeleraka</set>
+      <set name="names-format">{{name}}</set>
+      <set name="height" modifier="2d8">4'8"</set>
+      <set name="weight" modifier="2d4">110 lb.</set>
+    </setters>
+    <rules>
+      <stat name="wisdom" value="2" />
+      <stat name="charisma" value="1" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_VANOX" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_CELESTIAL" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_CELESTIAL_KNOWLEDGE" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_RADIANT_BORN" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_SACRIFICIAL_HEALING" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_SACRIFICIAL_SHIELDING" />
+    </rules>
+  </element>
+
+  <element name="Celestial Knowledge" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_CELESTIAL_KNOWLEDGE">
+    <description><p>You have proficiency in the History and Religion skills.</p></description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
+    </rules>
+  </element>
+
+  <element name="Radiant-Born" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_RADIANT_BORN">
+    <description><p>You have immunity to radiant damage.</p></description>
+    <sheet><description>You are immune to radiant damage.</description></sheet>
+    <rules>
+      <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_RADIANT" />
+    </rules>
+  </element>
+
+  <element name="Sacrificial Healing" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_SACRIFICIAL_HEALING">
+    <description><p>As a bonus action, you transfer hp from yourself to a willing creature you can see. Roll 1d4 (optionally add WIS modifier). You lose that many hp; the ally gains them. You cannot use this to fall unconscious. Scales to 1d6/1d8/1d10 at 5th/10th/15th level. Once per short or long rest.</p></description>
+    <sheet action="Bonus Action" usage="1/Short Rest">
+      <description>Roll 1d4 (+ WIS if desired). You lose that many hp; a willing creature you see gains them. You can't use this if it would knock you unconscious. (1d6 at 5th, 1d8 at 10th, 1d10 at 15th level)</description>
+    </sheet>
+  </element>
+
+  <element name="Sacrificial Shielding" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_SACRIFICIAL_SHIELDING">
+    <description><p>When a creature you can see takes damage, you can use your reaction to redirect half of that damage to yourself. Once per short or long rest.</p></description>
+    <sheet action="Reaction" usage="1/Short Rest">
+      <description>When a creature you can see takes damage, redirect half of it to yourself.</description>
+    </sheet>
+  </element>
+
+  <!-- ==================== GOLEM ==================== -->
+  <element name="Golem" type="Race" source="Races of Runeterra" id="ID_RUNETERRA_RACE_GOLEM">
+    <description>
+      <p>Constructions — manmade or natural — crafted in support of a goal. Golems commit themselves to the service of others with unflinching dedication.</p>
+      <h4>Golem Traits</h4>
+      <p><strong>Ability Score Increase.</strong> Your Strength score increases by 2.</p>
+      <p><strong>Age.</strong> Golems do not age; their age is from creation.</p>
+      <p><strong>Alignment.</strong> Tend toward lawful.</p>
+      <p><strong>Size.</strong> Medium.</p>
+      <p><strong>Speed.</strong> 30 feet.</p>
+      <p><strong>Living Construct.</strong> Immune to disease. No need to eat, drink, or breathe. Instead of sleeping, enter an inactive state for 4 hours. Fully aware of surroundings during this state.</p>
+      <p><strong>Natural Armor.</strong> +1 armor bonus when wearing armor. When unarmored, AC = 10 + natural armor bonus + DEX modifier.</p>
+      <p><strong>Languages.</strong> Va-Nox.</p>
+      <p><strong>Subrace.</strong> Choose Inorganic Golem or Organic Golem.</p>
+    </description>
+    <sheet display="false" />
+    <setters>
+      <set name="names" type="male">Beltrite, Cancrite, Duopsion, Incron, Ionase, Kogatz, Mannabar, Marevite, Noremite, Phoelite</set>
+      <set name="names" type="female">Resphur, Sovalt, Surasite, Valile</set>
+      <set name="names-format">{{name}}</set>
+      <set name="height" modifier="2d10">4'8"</set>
+      <set name="weight" modifier="2d6">150 lb.</set>
+    </setters>
+    <rules>
+      <stat name="strength" value="2" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_VANOX" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_LIVING_CONSTRUCT" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_GOLEM_NATURAL_ARMOR" />
+      <select type="Sub Race" name="Golem Subrace" supports="Golem" />
+    </rules>
+  </element>
+
+  <element name="Living Construct" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_LIVING_CONSTRUCT">
+    <description><p>Immune to disease. No need to eat, drink, or breathe. Instead of sleeping, enter an inactive state for 4 hours each day. You are fully aware of surroundings and notice approaching enemies during this state.</p></description>
+    <sheet><description>Immune to disease. No need to eat, drink, or breathe. Rest in an inactive state for 4 hours instead of sleeping, remaining fully aware.</description></sheet>
+    <rules>
+      <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_DISEASE" requirements="false"/>
+    </rules>
+  </element>
+
+  <element name="Natural Armor (Golem)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_GOLEM_NATURAL_ARMOR">
+    <description><p>You have a +1 armor bonus when wearing armor. When not wearing armor, your AC is 10 + natural armor bonus + DEX modifier.</p></description>
+    <sheet><description>+1 to AC while wearing armor. Unarmored AC = 10 + 1 (natural armor) + DEX modifier.</description></sheet>
+  </element>
+
+  <!-- Inorganic Golem Subrace -->
+  <element name="Inorganic Golem" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_INORGANIC_GOLEM">
+    <supports>Golem</supports>
+    <description>
+      <p>Golems made of machinery and technology, programmed by artificers and technomancers.</p>
+      <p><strong>Ability Score Increase.</strong> Your Intelligence score increases by 1.</p>
+      <p><strong>Extra Language.</strong> You can perfectly imitate one extra language of your choice.</p>
+      <p><strong>Knowledge Programmed.</strong> You are proficient in any combination of three skills or tools of your choice.</p>
+      <p><strong>Machine's Mastery.</strong> Choose one: Climbing Picks (climb speed 30 ft), Darkvision (60 ft), Drills (burrow speed 30 ft), Water Engine (swim speed 30 ft), or Wheels (walk speed 40 ft).</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="intelligence" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_KNOWLEDGE_PROGRAMMED" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_MACHINES_MASTERY" />
+      <select type="Language" name="Extra Language (Inorganic Golem)" supports="Starting Language" />
+    </rules>
+  </element>
+
+  <element name="Knowledge Programmed" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_KNOWLEDGE_PROGRAMMED">
+    <description><p>Your creator designed you with certain competencies. You are proficient in any combination of three skills or tools of your choice.</p></description>
+    <sheet display="false" />
+    <rules>
+      <select type="Proficiency" name="Skill/Tool Proficiency (Golem) 1" supports="Skill||Tool" />
+      <select type="Proficiency" name="Skill/Tool Proficiency (Golem) 2" supports="Skill||Tool" />
+      <select type="Proficiency" name="Skill/Tool Proficiency (Golem) 3" supports="Skill||Tool" />
+    </rules>
+  </element>
+
+  <element name="Machine's Mastery" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_MACHINES_MASTERY">
+    <description><p>Choose one: Climbing Picks (climb speed 30 ft), Darkvision 60 ft, Drills (burrow 30 ft), Water Engine (swim 30 ft), or Wheels (walk speed 40 ft).</p></description>
+    <sheet><description>You have one built-in apparatus of your choice: Climbing Picks (climb 30 ft), Darkvision (60 ft), Drills (burrow 30 ft), Water Engine (swim 30 ft), or Wheels (walk 40 ft).</description></sheet>
+  </element>
+
+  <!-- Organic Golem Subrace -->
+  <element name="Organic Golem" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_ORGANIC_GOLEM">
+    <supports>Golem</supports>
+    <description>
+      <p>Golems formed from natural materials — flora and rocks imbued with magic.</p>
+      <p><strong>Ability Score Increase.</strong> Your Constitution score increases by 1.</p>
+      <p><strong>Golem's Muscle.</strong> You count as one size larger for carrying capacity, pushing, dragging, or lifting.</p>
+      <p><strong>Nature's Knowledge.</strong> Proficiency in the Nature skill.</p>
+      <p><strong>Natural Weapon.</strong> Proficient with unarmed strikes, dealing 1d6+STR damage.</p>
+      <p><strong>Mask of the Wild.</strong> You can attempt to hide when only slightly obscured by foliage, tree bark, or rock walls.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="constitution" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_GOLEMS_MUSCLE" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_NATURES_KNOWLEDGE_GOLEM" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_NATURAL_WEAPON_GOLEM" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_MASK_WILD_GOLEM" />
+    </rules>
+  </element>
+
+  <element name="Golem's Muscle" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_GOLEMS_MUSCLE">
+    <description><p>Your size category is Medium, but you count as one size larger when determining carrying capacity and the weight you can push, drag, or lift.</p></description>
+    <sheet><description>Count as one size larger for carrying capacity, push, drag, and lift limits.</description></sheet>
+  </element>
+
+  <element name="Nature's Knowledge (Golem)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_NATURES_KNOWLEDGE_GOLEM">
+    <description><p>You are proficient in the Nature skill.</p></description>
+    <sheet display="false" />
+    <rules><grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" /></rules>
+  </element>
+
+  <element name="Natural Weapon (Golem)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_NATURAL_WEAPON_GOLEM">
+    <description><p>You are proficient with your unarmed strikes, which deal 1d6+STR damage.</p></description>
+    <sheet><description>Unarmed strikes deal 1d6+STR damage and you are proficient with them.</description></sheet>
+  </element>
+
+  <element name="Mask of the Wild (Golem)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_MASK_WILD_GOLEM">
+    <description><p>You can attempt to hide when you are only slightly obscured by foliage, tree bark, or rock walls.</p></description>
+    <sheet><description>You can hide when only slightly obscured by foliage, tree bark, or rock walls.</description></sheet>
+  </element>
+
+  <!-- ==================== HUMAN ==================== -->
+  <element name="Human (Runeterra)" type="Race" source="Races of Runeterra" id="ID_RUNETERRA_RACE_HUMAN">
+    <description>
+      <p>The most common people of Runeterra, diverse in culture and physiology, inhabiting almost all regions.</p>
+      <h4>Human Traits</h4>
+      <p><strong>Ability Score Increase.</strong> Two different ability scores of your choice increase by 1.</p>
+      <p><strong>Age.</strong> Adults by their late teen years; typically live up to a century.</p>
+      <p><strong>Alignment.</strong> Any.</p>
+      <p><strong>Size.</strong> Medium.</p>
+      <p><strong>Speed.</strong> 30 feet.</p>
+      <p><strong>Languages.</strong> Va-Nox and the language of your region.</p>
+      <p><strong>Subrace.</strong> Choose your region of origin.</p>
+    </description>
+    <sheet display="false" />
+    <setters>
+      <set name="height" modifier="2d10">4'8"</set>
+      <set name="weight" modifier="2d4">110 lb.</set>
+    </setters>
+    <rules>
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_VANOX" />
+      <select type="Racial Trait" name="Ability Score Increase (Human)" supports="Human Runeterra ASI" number="2" />
+      <select type="Sub Race" name="Human Regional Subrace" supports="Human Runeterra" />
+    </rules>
+  </element>
+
+  <!-- Human ASI selectable traits -->
+  <element name="+1 Strength (Human)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_HUMAN_ASI_STR">
+    <supports>Human Runeterra ASI</supports>
+    <rules><stat name="strength" value="1" /></rules>
+    <sheet display="false" />
+  </element>
+  <element name="+1 Dexterity (Human)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_HUMAN_ASI_DEX">
+    <supports>Human Runeterra ASI</supports>
+    <rules><stat name="dexterity" value="1" /></rules>
+    <sheet display="false" />
+  </element>
+  <element name="+1 Constitution (Human)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_HUMAN_ASI_CON">
+    <supports>Human Runeterra ASI</supports>
+    <rules><stat name="constitution" value="1" /></rules>
+    <sheet display="false" />
+  </element>
+  <element name="+1 Intelligence (Human)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_HUMAN_ASI_INT">
+    <supports>Human Runeterra ASI</supports>
+    <rules><stat name="intelligence" value="1" /></rules>
+    <sheet display="false" />
+  </element>
+  <element name="+1 Wisdom (Human)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_HUMAN_ASI_WIS">
+    <supports>Human Runeterra ASI</supports>
+    <rules><stat name="wisdom" value="1" /></rules>
+    <sheet display="false" />
+  </element>
+  <element name="+1 Charisma (Human)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_HUMAN_ASI_CHA">
+    <supports>Human Runeterra ASI</supports>
+    <rules><stat name="charisma" value="1" /></rules>
+    <sheet display="false" />
+  </element>
+
+  <!-- Bilgewater Human -->
+  <element name="Bilgewater Human" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_HUMAN_BILGEWATER">
+    <supports>Human Runeterra</supports>
+    <description>
+      <p>From the lawless Serpent Isles port city of Bilgewater — pirates, gamblers, traders.</p>
+      <p><strong>Ability Score Increase.</strong> Your Dexterity score increases by 1.</p>
+      <p><strong>Tavern Brawler.</strong> Proficient with improvised weapons and unarmed strikes (d4). On a hit with an unarmed strike or improvised weapon, you can use a bonus action to attempt to grapple the target.</p>
+      <p><strong>Vehicle Proficiency.</strong> Proficiency with water vehicles.</p>
+      <p><strong>Extra Language.</strong> A regional language of your choice.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="dexterity" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_TAVERN_BRAWLER_BILGEWATER" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_WATER" />
+      <select type="Language" name="Regional Language (Bilgewater)" supports="Starting Language" />
+    </rules>
+  </element>
+  <element name="Tavern Brawler (Bilgewater)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_TAVERN_BRAWLER_BILGEWATER">
+    <description><p>Proficient with improvised weapons and unarmed strikes (d4). On a hit with an unarmed strike or improvised weapon on your turn, you can use a bonus action to attempt to grapple the target.</p></description>
+    <sheet><description>Proficient with improvised weapons and unarmed strikes (d4). After hitting with an unarmed strike or improvised weapon, bonus action to grapple.</description></sheet>
+  </element>
+
+  <!-- Demacian Human -->
+  <element name="Demacian Human" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_HUMAN_DEMACIAN">
+    <supports>Human Runeterra</supports>
+    <description>
+      <p>From the justice-driven kingdom of Demacia, dedicated to anti-magic military tradition.</p>
+      <p><strong>Ability Score Increase.</strong> Your Strength score increases by 1.</p>
+      <p><strong>Demacian Bravery.</strong> Advantage on saving throws against being frightened.</p>
+      <p><strong>Mage Slayer.</strong> When a creature within 5 ft casts a spell, you can use your reaction to make a melee weapon attack. When you damage a concentrating creature, they have disadvantage on the concentration save. You have advantage on saving throws against spells cast by creatures within 5 ft.</p>
+      <p><strong>Extra Language.</strong> A regional language of your choice.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_DEMACIAN_BRAVERY" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_MAGE_SLAYER_DEMACIAN" />
+      <select type="Language" name="Regional Language (Demacia)" supports="Starting Language" />
+    </rules>
+  </element>
+  <element name="Demacian Bravery" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_DEMACIAN_BRAVERY">
+    <description><p>You have advantage on saving throws against being frightened.</p></description>
+    <sheet><description>Advantage on saving throws against being frightened.</description></sheet>
+  </element>
+  <element name="Mage Slayer (Demacian)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_MAGE_SLAYER_DEMACIAN">
+    <description><p>When a creature within 5 feet of you casts a spell, you can use your reaction to make a melee weapon attack against them. Creatures you damage while concentrating have disadvantage on the concentration save. You have advantage on saves against spells cast by creatures within 5 feet of you.</p></description>
+    <sheet><description>Reaction: make a melee attack when a creature within 5 ft casts a spell. Damaged concentrating creatures have disadvantage on concentration saves. Advantage on saves vs. spells from creatures within 5 ft.</description></sheet>
+  </element>
+
+  <!-- Freljordian Human -->
+  <element name="Freljordian Human" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_HUMAN_FRELJORDIAN">
+    <supports>Human Runeterra</supports>
+    <description>
+      <p>Resilient warriors from the frozen tundra of the Freljord.</p>
+      <p><strong>Ability Score Increase.</strong> Your Constitution score increases by 1.</p>
+      <p><strong>Arctic Terrain Familiarity.</strong> Advantage on Investigation, Nature, Perception, and Survival checks in arctic terrain; not hindered by difficult terrain there.</p>
+      <p><strong>Savage Attacker.</strong> Once per turn, when rolling damage for a melee weapon attack, you can reroll the weapon's damage dice and use either total.</p>
+      <p><strong>Extra Language.</strong> A regional language of your choice.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="constitution" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_ARCTIC_TERRAIN_FRELJORD" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_SAVAGE_ATTACKER_FRELJORD" />
+      <select type="Language" name="Regional Language (Freljord)" supports="Starting Language" />
+    </rules>
+  </element>
+  <element name="Arctic Terrain Familiarity" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_ARCTIC_TERRAIN_FRELJORD">
+    <description><p>Advantage on Investigation, Nature, Perception, and Survival in arctic terrain; not hindered by difficult terrain there.</p></description>
+    <sheet><description>Advantage on Investigation, Nature, Perception, and Survival checks in arctic terrain; not hindered by difficult terrain there.</description></sheet>
+  </element>
+  <element name="Savage Attacker (Freljordian)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_SAVAGE_ATTACKER_FRELJORD">
+    <description><p>Once per turn when rolling damage for a melee weapon attack, you can reroll the weapon's damage dice and use either total.</p></description>
+    <sheet usage="1/Turn"><description>Reroll a melee weapon's damage dice and use either result.</description></sheet>
+  </element>
+
+  <!-- Ionian Human -->
+  <element name="Ionian Human" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_HUMAN_IONIAN">
+    <supports>Human Runeterra</supports>
+    <description>
+      <p>From the spiritually harmonious archipelago of Ionia, shaped by nature and martial tradition.</p>
+      <p><strong>Ability Score Increase.</strong> Your Wisdom score increases by 1.</p>
+      <p><strong>Sentinel.</strong> When you hit a creature with an opportunity attack, its speed becomes 0. Creatures within 5 ft provoke opportunity attacks even if they Disengage. When a creature within 5 ft attacks a different target, you can use your reaction to make a melee attack against it.</p>
+      <p><strong>Ionian Weapon Proficiency.</strong> Proficiency with one simple weapon and one martial weapon from the Ionian weapons list (Kama, Kunai, Shuriken, Chakram, Dao, Jian, or Daikyu).</p>
+      <p><strong>Extra Language.</strong> A regional language of your choice.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="wisdom" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_SENTINEL_IONIAN" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_IONIAN_WEAPON_PROFICIENCY" />
+      <select type="Language" name="Regional Language (Ionia)" supports="Starting Language" />
+    </rules>
+  </element>
+  <element name="Sentinel (Ionian)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_SENTINEL_IONIAN">
+    <description><p>On opportunity attack hits, reduce target's speed to 0. Creatures provoke opportunity attacks even after Disengaging. Reaction: attack a creature within 5 ft that attacks a different target.</p></description>
+    <sheet><description>Opportunity attack hits reduce speed to 0. Creatures provoke OAs even after Disengaging. Reaction: attack a creature within 5 ft that attacks a different target.</description></sheet>
+  </element>
+  <element name="Ionian Weapon Proficiency" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_IONIAN_WEAPON_PROFICIENCY">
+    <description><p>You are proficient with one simple and one martial weapon from the Ionian weapons list: Kama, Kunai, Shuriken, Chakram (simple); Dao, Jian (martial melee); Daikyu (martial ranged).</p></description>
+    <sheet><description>Proficiency with one simple and one martial Ionian weapon (Kama, Kunai, Shuriken, Chakram, Dao, Jian, or Daikyu).</description></sheet>
+  </element>
+
+  <!-- Ixtali Human -->
+  <element name="Ixtali Human" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_HUMAN_IXTALI">
+    <supports>Human Runeterra</supports>
+    <description>
+      <p>From the hidden jungle civilization of Ixtal, masters of elemental magic.</p>
+      <p><strong>Ability Score Increase.</strong> Your Charisma score increases by 1.</p>
+      <p><strong>Elemental Strike.</strong> Choose a damage type (acid, cold, fire, lightning, or thunder). When you hit with a weapon attack, you can deal an additional 1d6 of that type. Scales to 2d6/3d6/4d6 at 6th/11th/16th level. Once per short rest.</p>
+      <p><strong>Jungle Terrain Familiarity.</strong> Advantage on Investigation, Nature, Perception, and Survival in swamp/jungle terrain; not hindered by difficult terrain there.</p>
+      <p><strong>Extra Language.</strong> A regional language of your choice.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="charisma" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_ELEMENTAL_STRIKE" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_JUNGLE_TERRAIN_IXTAL" />
+      <select type="Language" name="Regional Language (Ixtal)" supports="Starting Language" />
+    </rules>
+  </element>
+  <element name="Elemental Strike" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_ELEMENTAL_STRIKE">
+    <description><p>Choose acid, cold, fire, lightning, or thunder. On a weapon hit, deal an extra 1d6 of that type. Scales to 2d6/3d6/4d6 at 6th/11th/16th level. Once per short rest.</p></description>
+    <sheet usage="1/Short Rest"><description>Add 1d6 elemental damage (chosen type) to a weapon hit (2d6 at 6th, 3d6 at 11th, 4d6 at 16th level).</description></sheet>
+  </element>
+  <element name="Jungle Terrain Familiarity" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_JUNGLE_TERRAIN_IXTAL">
+    <description><p>Advantage on Investigation, Nature, Perception, and Survival in swamp/jungle terrain; not hindered by difficult terrain there.</p></description>
+    <sheet><description>Advantage on Investigation, Nature, Perception, and Survival in swamp/jungle terrain; not hindered by difficult terrain there.</description></sheet>
+  </element>
+
+  <!-- Noxian Human -->
+  <element name="Noxian Human" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_HUMAN_NOXIAN">
+    <supports>Human Runeterra</supports>
+    <description>
+      <p>From the militaristic meritocratic empire of Noxus.</p>
+      <p><strong>Ability Score Increase.</strong> Your Strength score increases by 1.</p>
+      <p><strong>Battle Tactician.</strong> +5 bonus to initiative. At the start of an encounter, either swap your own initiative with one hostile creature, or swap the initiatives of two allies.</p>
+      <p><strong>Noxian Force.</strong> Proficiency in Intimidation and Persuasion.</p>
+      <p><strong>Extra Language.</strong> A regional language of your choice.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_BATTLE_TACTICIAN" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+      <select type="Language" name="Regional Language (Noxus)" supports="Starting Language" />
+    </rules>
+  </element>
+  <element name="Battle Tactician" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_BATTLE_TACTICIAN">
+    <description><p>+5 bonus to initiative. At the start of an encounter, swap your own initiative with one hostile creature, OR swap the initiatives of two of your allies.</p></description>
+    <sheet><description>+5 to initiative. At encounter start: swap your initiative with one hostile creature's, OR swap two allies' initiatives.</description></sheet>
+    <rules><stat name="initiative" value="5" /></rules>
+  </element>
+
+  <!-- Piltovan and Zaunite Human -->
+  <element name="Piltovan and Zaunite Human" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_HUMAN_PILTOVAN">
+    <supports>Human Runeterra</supports>
+    <description>
+      <p>From the sister city-states of progress, Piltover and Zaun.</p>
+      <p><strong>Ability Score Increase.</strong> Your Intelligence score increases by 1.</p>
+      <p><strong>Extra Feat.</strong> Choose one: Linguist, Skilled, or Observant.</p>
+      <p><strong>Inventor's Gadgets.</strong> Proficiency with Tinker's Tools and one other artisan's tool of your choice.</p>
+      <p><strong>Extra Language.</strong> A regional language of your choice.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="intelligence" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_INVENTORS_GADGETS" />
+      <select type="Language" name="Regional Language (Piltover/Zaun)" supports="Starting Language" />
+    </rules>
+  </element>
+  <element name="Inventor's Gadgets" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_INVENTORS_GADGETS">
+    <description><p>You are proficient with Tinker's Tools and one other artisan's tool of your choice.</p></description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS" />
+      <select type="Proficiency" name="Artisan's Tool (Inventor)" supports="Artisan tools" />
+    </rules>
+  </element>
+
+  <!-- Shuriman Human -->
+  <element name="Shuriman Human" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_HUMAN_SHURIMAN">
+    <supports>Human Runeterra</supports>
+    <description>
+      <p>From the desert cities and ancient ruins of Shurima.</p>
+      <p><strong>Ability Score Increase.</strong> Your Dexterity score increases by 1.</p>
+      <p><strong>Desert Terrain Familiarity.</strong> Advantage on Wisdom (Survival) in desert terrain; not hindered by difficult terrain there.</p>
+      <p><strong>Dungeon Delver.</strong> Advantage on Perception and Investigation to detect secret doors. Advantage on saves vs. traps. Resistance to trap damage. Can search for traps at normal pace.</p>
+      <p><strong>Extra Language.</strong> Modern Shuriman or Ancient Shuriman.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="dexterity" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_DESERT_TERRAIN_SHURIMAN_HUMAN" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_DUNGEON_DELVER_SHURIMAN" />
+      <select type="Language" name="Regional Language (Shurima)" supports="Starting Language" />
+    </rules>
+  </element>
+  <element name="Desert Terrain Familiarity (Shuriman Human)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_DESERT_TERRAIN_SHURIMAN_HUMAN">
+    <description><p>Advantage on Wisdom (Survival) in desert terrain; not hindered by difficult terrain there.</p></description>
+    <sheet><description>Advantage on Wisdom (Survival) in desert terrain; not hindered by difficult terrain there.</description></sheet>
+  </element>
+  <element name="Dungeon Delver (Shuriman)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_DUNGEON_DELVER_SHURIMAN">
+    <description><p>Advantage on Perception and Investigation for secret doors. Advantage on saves vs. traps. Resistance to trap damage. Search for traps at normal pace.</p></description>
+    <sheet><description>Advantage on Perception/Investigation for secret doors. Advantage on saves vs. traps. Resistance to trap damage. Search for traps at normal pace.</description></sheet>
+  </element>
+
+  <!-- Targonian Human -->
+  <element name="Targonian Human" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_HUMAN_TARGONIAN">
+    <supports>Human Runeterra</supports>
+    <description>
+      <p>From the mountain tribes surrounding the awe-inspiring Mount Targon.</p>
+      <p><strong>Ability Score Increase.</strong> Your Constitution score increases by 1.</p>
+      <p><strong>Celestial Faith.</strong> Choose Solari (Sunstrike feat + Sunlight Protection) or Lunari (Skulker feat + Lunari Darkvision 60 ft).</p>
+      <p><strong>Mountainous Terrain Familiarity.</strong> Advantage on Wisdom (Survival) in mountainous terrain; not hindered by difficult terrain there.</p>
+      <p><strong>Extra Language.</strong> Targonian.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="constitution" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_MOUNTAINOUS_TERRAIN_TARG_HUMAN" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_TARGONIAN" />
+      <select type="Racial Trait" name="Celestial Faith" supports="Targonian Faith" />
+    </rules>
+  </element>
+  <element name="Mountainous Terrain Familiarity (Targonian Human)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_MOUNTAINOUS_TERRAIN_TARG_HUMAN">
+    <description><p>Advantage on Wisdom (Survival) in mountainous terrain; not hindered by difficult terrain there.</p></description>
+    <sheet><description>Advantage on Wisdom (Survival) in mountainous terrain; not hindered by difficult terrain there.</description></sheet>
+  </element>
+  <element name="Solari Faith" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_SOLARI">
+    <supports>Targonian Faith</supports>
+    <description>
+      <p>Worshipers of the holy light of the sun.</p>
+      <p><strong>Sunstrike:</strong> When you roll damage, deal an extra 1d6 radiant damage (2d6/3d6/4d6 at 6th/11th/16th level). Once per short rest.</p>
+      <p><strong>Sunlight Protection:</strong> Resistance to necrotic and radiant damage.</p>
+    </description>
+    <sheet><description>Sunstrike (1d6 radiant bonus on damage roll, once/short rest, scales at 6th/11th/16th) and resistance to necrotic and radiant damage.</description></sheet>
+  </element>
+  <element name="Lunari Faith" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_LUNARI">
+    <supports>Targonian Faith</supports>
+    <description>
+      <p>Worshipers of the power of the moon.</p>
+      <p><strong>Skulker:</strong> Can hide when lightly obscured. Missing a ranged attack while hidden doesn't reveal position. Dim light doesn't impose disadvantage on Perception (sight).</p>
+      <p><strong>Lunari Darkvision:</strong> Darkvision 60 feet.</p>
+    </description>
+    <sheet><description>Skulker (hide when lightly obscured, ranged misses don't reveal position, dim light no disadvantage on Perception). Darkvision 60 ft.</description></sheet>
+    <rules><grant type="Vision" id="ID_VISION_DARKVISION" /></rules>
+  </element>
+
+  <!-- Void-Altered Human -->
+  <element name="Void-Altered Human" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_HUMAN_VOID_ALTERED">
+    <supports>Human Runeterra</supports>
+    <description>
+      <p>Rare individuals transformed — not destroyed — by exposure to the Void, gaining necrotic power.</p>
+      <p><strong>Ability Score Increase.</strong> Your Wisdom score increases by 1.</p>
+      <p><strong>Void Black Magic.</strong> You know the Sapping Sting cantrip. At 3rd level, you know Toll the Dead. At 5th level, you can cast Arms of Hadar once per day (no spell slot). Wisdom is your spellcasting ability.</p>
+      <p><strong>Extra Language.</strong> A regional language of your choice.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="wisdom" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_VOID_BLACK_MAGIC" />
+      <select type="Language" name="Regional Language (Void-Altered)" supports="Starting Language" />
+    </rules>
+  </element>
+  <element name="Void Black Magic" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_VOID_BLACK_MAGIC">
+    <description><p>You know Sapping Sting (cantrip). At 3rd level: Toll the Dead (cantrip). At 5th level: Arms of Hadar 1/day (no slot). Wisdom is your spellcasting ability.</p></description>
+    <sheet><description>Cantrip: Sapping Sting. At 3rd level: Toll the Dead. At 5th level: Arms of Hadar once/day (no slot). Spellcasting ability: Wisdom.</description></sheet>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_EGW_SPELL_SAPPING_STING" spellcasting="Race" known="true" />
+      <grant type="Spell" id="ID_WOTC_XGTE_SPELL_TOLL_THE_DEAD" spellcasting="Race" known="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_ARMS_OF_HADAR" spellcasting="Race" known="true" level="5" />
+    </rules>
+  </element>
+
+  <!-- ==================== MINOTAUR ==================== -->
+  <element name="Minotaur (Runeterra)" type="Race" source="Races of Runeterra" id="ID_RUNETERRA_RACE_MINOTAUR">
+    <description>
+      <p>Powerful, humanoid bovines known for their warrior-like qualities and strong clan values.</p>
+      <h4>Minotaur Traits</h4>
+      <p><strong>Ability Score Increase.</strong> Strength +2, Constitution +1.</p>
+      <p><strong>Age.</strong> Adult at ~15; live up to 150 years.</p>
+      <p><strong>Size.</strong> 6–8 feet tall. Medium.</p>
+      <p><strong>Speed.</strong> 30 feet.</p>
+      <p><strong>Horns.</strong> Melee natural weapon: 1d6+STR piercing. Proficient.</p>
+      <p><strong>Charge and Gore.</strong> Move 20+ ft straight toward a target, then gore it for extra 2d6 piercing damage.</p>
+      <p><strong>Menacing.</strong> Proficiency in Intimidation.</p>
+      <p><strong>Relentless Endurance.</strong> Drop to 1 hp instead of 0 once per long rest.</p>
+      <p><strong>Stomp.</strong> As an action, creatures within 5 ft make a DEX save or fall prone and take 2d6 bludgeoning (half on success). Once per...</p>
+      <p><strong>Languages.</strong> Va-Nox and a regional language.</p>
+    </description>
+    <sheet display="false" />
+    <setters>
+      <set name="names" type="male">Anaidax, Dengrim, Erkiras, Huntruk, Morefrad, Rethmek, Syrathun, Trareus, Wryestair, Zhaben</set>
+      <set name="names" type="female">Andeha, Belrada, Gneveru, Konatia, Mentsis, Phigea, Shesen, Silzera, Vottian, Xamara</set>
+      <set name="names" type="neutral">Agsan, Gremerdes, Konden, Lerrenes, Mazeph, Maulivar, Ramonis, Rhosin, Vrivir</set>
+      <set name="names-format">{{name}}</set>
+      <set name="height" modifier="2d10">5'4"</set>
+      <set name="weight" modifier="2d6">175 lb.</set>
+    </setters>
+    <rules>
+      <stat name="strength" value="2" />
+      <stat name="constitution" value="1" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_VANOX" />
+      <select type="Language" name="Regional Language (Minotaur)" supports="Starting Language" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_MINOTAUR_HORNS" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_CHARGE_AND_GORE" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_MINOTAUR_RELENTLESS_ENDURANCE" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_STOMP" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+    </rules>
+  </element>
+
+  <element name="Horns (Minotaur)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_MINOTAUR_HORNS">
+    <description><p>Your horns are a melee natural weapon dealing 1d6+STR piercing damage. You are proficient with them.</p></description>
+    <sheet><description>Melee attack with horns: 1d6 + STR piercing damage. Proficient.</description></sheet>
+  </element>
+  <element name="Charge and Gore" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_CHARGE_AND_GORE">
+    <description><p>If you move at least 20 feet straight toward a target, you can gore it. On a successful charge and gore, the target takes an extra 2d6 piercing damage.</p></description>
+    <sheet><description>Move 20+ ft straight toward a target and gore it: extra 2d6 piercing damage on hit.</description></sheet>
+  </element>
+  <element name="Relentless Endurance (Minotaur)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_MINOTAUR_RELENTLESS_ENDURANCE">
+    <description><p>When reduced to 0 hp but not killed outright, drop to 1 hp instead. Once per long rest.</p></description>
+    <sheet usage="1/Long Rest"><description>When reduced to 0 hp but not killed outright, drop to 1 hp instead.</description></sheet>
+  </element>
+  <element name="Stomp" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_STOMP">
+    <description><p>As an action, stomp the ground. Each creature within 5 ft makes a DEX save. On failure: falls prone and takes 2d6 bludgeoning. On success: half damage, stays upright. Flying creatures unaffected.</p></description>
+    <sheet action="Action"><description>Each creature within 5 ft makes a DEX save or falls prone and takes 2d6 bludgeoning (half on success). Flying creatures unaffected.</description></sheet>
+  </element>
+
+  <!-- ==================== SPIRIT ==================== -->
+  <element name="Spirit (Runeterra)" type="Race" source="Races of Runeterra" id="ID_RUNETERRA_RACE_SPIRIT">
+    <description>
+      <p>Supernatural entities tied to realms beyond mortal understanding. Spirits bring otherworldly influence to Runeterra.</p>
+      <h4>Spirit Traits</h4>
+      <p><strong>Ability Score Increase.</strong> Charisma +2.</p>
+      <p><strong>Age.</strong> Lifespans spanning millennia.</p>
+      <p><strong>Alignment.</strong> Rarely lawful. Demons tend evil; yordles tend good.</p>
+      <p><strong>Size.</strong> Demon: Medium. Yordle: Small.</p>
+      <p><strong>Speed.</strong> 30 feet.</p>
+      <p><strong>Living Spirit.</strong> Immune to disease. No need to eat (can ingest). Rest 4 hours instead of 8.</p>
+      <p><strong>Mystical Awareness.</strong> Advantage on saves against being charmed. Magic can't put you to sleep.</p>
+      <p><strong>Spirit Realm's Refuge.</strong> As an action, teleport into a pocket of the Spirit Realm (~20x20 ft) for up to 1 hour. Teleport back on exit. Once per 3 long rests.</p>
+      <p><strong>Languages.</strong> Va-Nox and Sylvan.</p>
+      <p><strong>Subrace.</strong> Demon or Yordle.</p>
+    </description>
+    <sheet display="false" />
+    <setters>
+      <set name="names" type="male">Asha, Damethus, Faltas, Redmurne, Yeboros</set>
+      <set name="names" type="female">Bicey, Cheelie, Eearey, Fayan, Grari, Jilni, Ledrey, Meevo, Pimmer, Perret, Wultz, Yorro, Zefo</set>
+      <set name="names-format">{{name}}</set>
+    </setters>
+    <rules>
+      <stat name="charisma" value="2" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_VANOX" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_SYLVAN" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_LIVING_SPIRIT" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_MYSTICAL_AWARENESS" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_SPIRIT_REALM_REFUGE" />
+      <select type="Sub Race" name="Spirit Subrace" supports="Spirit Runeterra" />
+    </rules>
+  </element>
+
+  <element name="Living Spirit" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_LIVING_SPIRIT">
+    <description><p>Immune to disease. No need to eat (can ingest). Rest in a sleep-like state for 4 hours each day, gaining the benefit of 8 hours of sleep.</p></description>
+    <sheet><description>Immune to disease. No need to eat. Rest 4 hours for the benefits of 8 hours of sleep.</description></sheet>
+  </element>
+  <element name="Mystical Awareness" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_MYSTICAL_AWARENESS">
+    <description><p>Advantage on saving throws against being charmed. Magic can't put you to sleep.</p></description>
+    <sheet><description>Advantage on saves vs. being charmed. Magic can't put you to sleep.</description></sheet>
+  </element>
+  <element name="Spirit Realm's Refuge" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_SPIRIT_REALM_REFUGE">
+    <description><p>As an action, teleport into a ~20x20 ft pocket of the Spirit Realm for up to 1 hour. On exit, return to your previous location. Once per 3 long rests.</p></description>
+    <sheet action="Action" usage="1/3 Long Rests"><description>Teleport into a pocket of the Spirit Realm (20x20 ft) for up to 1 hour, then return to your previous location.</description></sheet>
+  </element>
+
+  <!-- Demon Subrace -->
+  <element name="Demon" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_DEMON">
+    <supports>Spirit Runeterra</supports>
+    <description>
+      <p>Malevolent spirits that feed on mortal emotion and desire.</p>
+      <p><strong>Ability Score Increase.</strong> Wisdom +1.</p>
+      <p><strong>Size.</strong> Medium.</p>
+      <p><strong>Evil Insight.</strong> Once per short or long rest, as a bonus action, make a Wisdom (Insight) check against a creature's Charisma (Deception). On success, gain advantage on your next attack roll against it and learn its damage vulnerabilities.</p>
+      <p><strong>Demonic Darkvision.</strong> Darkvision 120 feet.</p>
+      <p><strong>Light Aversion.</strong> Vulnerable to radiant damage.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="wisdom" value="1" />
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_EVIL_INSIGHT" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_DEMONIC_DARKVISION" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_LIGHT_AVERSION" />
+    </rules>
+  </element>
+  <element name="Evil Insight" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_EVIL_INSIGHT">
+    <description><p>Once per short or long rest, as a bonus action, make a Wisdom (Insight) check vs. a creature's Charisma (Deception). On success: advantage on your next attack roll against it, and you learn its damage vulnerabilities.</p></description>
+    <sheet action="Bonus Action" usage="1/Short Rest"><description>Wisdom (Insight) check vs. creature's Charisma (Deception). On success: advantage on your next attack against it, and learn its damage vulnerabilities.</description></sheet>
+  </element>
+  <element name="Demonic Darkvision" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_DEMONIC_DARKVISION">
+    <description><p>Darkvision 120 feet.</p></description>
+    <sheet display="false" />
+    <rules><grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" /></rules>
+  </element>
+  <element name="Light Aversion" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_LIGHT_AVERSION">
+    <description><p>You are vulnerable to radiant damage.</p></description>
+    <sheet><description>You are vulnerable to radiant damage.</description></sheet>
+  </element>
+
+  <!-- Yordle Subrace -->
+  <element name="Yordle" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_YORDLE">
+    <supports>Spirit Runeterra</supports>
+    <description>
+      <p>Small, lively spirits with mammalian features from the enchanted Bandle City.</p>
+      <p><strong>Ability Score Increase.</strong> Intelligence +2.</p>
+      <p><strong>Size.</strong> Small.</p>
+      <p><strong>Magic Mischief.</strong> Once per long rest, as a bonus action: impose advantage on the next spell attack by a willing creature (not yourself), impose disadvantage on the next enemy spell attack, or change the damage type of your next successful spell attack.</p>
+      <p><strong>Yordle Ears.</strong> Advantage on Wisdom (Perception) checks relying on hearing.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="intelligence" value="2" />
+      <grant type="Size" id="ID_SIZE_SMALL" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_MAGIC_MISCHIEF" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_YORDLE_EARS" />
+    </rules>
+  </element>
+  <element name="Magic Mischief" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_MAGIC_MISCHIEF">
+    <description><p>Once per long rest, as a bonus action, choose one: impose advantage on the next spell attack by a willing creature (not you), impose disadvantage on the next enemy spell attack, or change the damage type of your next successful spell attack.</p></description>
+    <sheet action="Bonus Action" usage="1/Long Rest"><description>Choose one: impose advantage on an ally's next spell attack, impose disadvantage on an enemy's next spell attack, or change your next successful spell attack's damage type.</description></sheet>
+  </element>
+  <element name="Yordle Ears" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_YORDLE_EARS">
+    <description><p>You have advantage on Wisdom (Perception) checks that rely on hearing.</p></description>
+    <sheet><description>Advantage on Wisdom (Perception) checks that rely on hearing.</description></sheet>
+  </element>
+
+  <!-- ==================== TROLL ==================== -->
+  <element name="Troll (Runeterra)" type="Race" source="Races of Runeterra" id="ID_RUNETERRA_RACE_TROLL">
+    <description>
+      <p>Massive, monstrous beings inhabiting Runeterra's ice and sand deserts, built for survival of the fittest.</p>
+      <h4>Troll Traits</h4>
+      <p><strong>Ability Score Increase.</strong> Constitution +2.</p>
+      <p><strong>Age.</strong> Adult at ~50; live 300–350 years.</p>
+      <p><strong>Alignment.</strong> Neutral or evil.</p>
+      <p><strong>Size.</strong> 6–8 feet. Medium.</p>
+      <p><strong>Speed.</strong> 30 feet.</p>
+      <p><strong>Darkvision.</strong> 60 feet.</p>
+      <p><strong>Keen Smell.</strong> Advantage on Wisdom (Perception) checks relying on smell.</p>
+      <p><strong>Savage Attacks.</strong> On a critical hit with a melee weapon, roll one extra weapon damage die.</p>
+      <p><strong>Troll Toughness.</strong> HP maximum +1 at 1st level, and +1 each subsequent level.</p>
+      <p><strong>Quick Healing.</strong> As a reaction to taking damage, roll 1d6+CON and recover that many hp. Once per long rest.</p>
+      <p><strong>Languages.</strong> Can speak Va-Nox but cannot read or write it.</p>
+      <p><strong>Subrace.</strong> Frost-Troll or Sand-Troll.</p>
+    </description>
+    <sheet display="false" />
+    <setters>
+      <set name="names" type="male">Balzim, Detid, Gamja, Hammo, Kaijab, Kelraz, Lagbo, Rabash, Sesdu, Silbo, Tarmek, Vutza, Zulkaz</set>
+      <set name="names" type="female">Bunjin, Dulyu, Gilta, Helthra, Kritzel, Morgo, Rangi, Rasha, Shakba, Tezza, Wrathro, Yashbi, Zenma</set>
+      <set name="names" type="neutral">Boryan, Bruddle, Damar, Madras, Ronja, Teddar, Tizzal, Vannro, Yasho, Zhonlo, Zinjel</set>
+      <set name="names-format">{{name}}</set>
+      <set name="height" modifier="2d10">5'6"</set>
+      <set name="weight" modifier="2d6">200 lb.</set>
+    </setters>
+    <rules>
+      <stat name="constitution" value="2" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <grant type="Vision" id="ID_VISION_DARKVISION" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_VANOX" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_KEEN_SMELL_TROLL" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_SAVAGE_ATTACKS_TROLL" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_TROLL_TOUGHNESS" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_QUICK_HEALING" />
+      <select type="Sub Race" name="Troll Subrace" supports="Troll Runeterra" />
+    </rules>
+  </element>
+
+  <element name="Keen Smell (Troll)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_KEEN_SMELL_TROLL">
+    <description><p>Advantage on Wisdom (Perception) checks that rely on smell.</p></description>
+    <sheet><description>Advantage on Wisdom (Perception) checks relying on smell.</description></sheet>
+  </element>
+  <element name="Savage Attacks (Troll)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_SAVAGE_ATTACKS_TROLL">
+    <description><p>When you score a critical hit with a melee weapon attack, roll one of the weapon's damage dice one additional time and add it to the critical hit damage.</p></description>
+    <sheet><description>Critical hits with melee weapons: roll one extra weapon damage die.</description></sheet>
+  </element>
+  <element name="Troll Toughness" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_TROLL_TOUGHNESS">
+    <description><p>Your hit point maximum increases by 1 at 1st level, and by 1 each time you gain a level thereafter.</p></description>
+    <sheet display="false" />
+    <rules><stat name="hp" value="level" /></rules>
+  </element>
+  <element name="Quick Healing" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_QUICK_HEALING">
+    <description><p>As a reaction to taking damage, roll 1d6+CON and recover that many hp. Once per long rest.</p></description>
+    <sheet action="Reaction" usage="1/Long Rest"><description>Roll 1d6+CON and recover that many hp as a reaction to taking damage.</description></sheet>
+  </element>
+
+  <!-- Frost-Troll Subrace -->
+  <element name="Frost-Troll" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_FROST_TROLL">
+    <supports>Troll Runeterra</supports>
+    <description>
+      <p>Savage trolls of the Freljord's frozen glaciers.</p>
+      <p><strong>Ability Score Increase.</strong> Strength +1.</p>
+      <p><strong>Arctic Terrain Familiarity.</strong> Advantage on Wisdom (Survival) in arctic/snowy terrain; not hindered by difficult terrain.</p>
+      <p><strong>Frost-troll Weapon Training.</strong> Proficiency with mauls, war picks, and warhammers.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_ARCTIC_TERRAIN_FROST_TROLL" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MAUL" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_WARPICK" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_WARHAMMER" />
+    </rules>
+  </element>
+  <element name="Arctic Terrain Familiarity (Frost-Troll)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_ARCTIC_TERRAIN_FROST_TROLL">
+    <description><p>Advantage on Wisdom (Survival) in arctic/snowy terrain; not hindered by difficult terrain there.</p></description>
+    <sheet><description>Advantage on Wisdom (Survival) in arctic or snowy terrain; not hindered by difficult terrain there.</description></sheet>
+  </element>
+
+  <!-- Sand-Troll Subrace -->
+  <element name="Sand-Troll" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_SAND_TROLL">
+    <supports>Troll Runeterra</supports>
+    <description>
+      <p>Secretive trolls scavenging beneath the sands of Shurima and Ixtal.</p>
+      <p><strong>Ability Score Increase.</strong> Dexterity +1.</p>
+      <p><strong>Desert Terrain Familiarity.</strong> Advantage on Wisdom (Survival) in desert terrain; not hindered by difficult terrain.</p>
+      <p><strong>Sand-troll Weapon Training.</strong> Proficiency with greataxes, morningstars, and scimitars.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="dexterity" value="1" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_DESERT_TERRAIN_SAND_TROLL" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_GREATAXE" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MORNINGSTAR" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SCIMITAR" />
+    </rules>
+  </element>
+  <element name="Desert Terrain Familiarity (Sand-Troll)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_DESERT_TERRAIN_SAND_TROLL">
+    <description><p>Advantage on Wisdom (Survival) in desert terrain; not hindered by difficult terrain there.</p></description>
+    <sheet><description>Advantage on Wisdom (Survival) in desert terrain; not hindered by difficult terrain there.</description></sheet>
+  </element>
+
+  <!-- ==================== VASTAYA ==================== -->
+  <element name="Vastaya" type="Race" source="Races of Runeterra" id="ID_RUNETERRA_RACE_VASTAYA">
+    <description>
+      <p>Chimeric humanoids with animalistic traits and a deep connection to nature-based magic, descended from the ancient Vastayashai'rei.</p>
+      <h4>Vastaya Traits</h4>
+      <p><strong>Ability Score Increase.</strong> Wisdom +2.</p>
+      <p><strong>Age.</strong> Mature like humans but live up to 600 years.</p>
+      <p><strong>Alignment.</strong> Tend toward chaotic.</p>
+      <p><strong>Size.</strong> 4–6 feet. Medium.</p>
+      <p><strong>Speed.</strong> 30 feet.</p>
+      <p><strong>Innate Shapechanger.</strong> Cast Alter Self without expending a spell slot, once per long rest.</p>
+      <p><strong>Knowledge of the Wild.</strong> Proficiency in Nature and Survival.</p>
+      <p><strong>Languages.</strong> Va-Nox and Vastayan.</p>
+      <p><strong>Subrace.</strong> Landwalker Tribes, Tribes of the Sea, or Tribes of the Sky.</p>
+    </description>
+    <sheet display="false" />
+    <setters>
+      <set name="names" type="male">Akrato, Brekan, Draclo, Gongram, Ishkan, Marok, Neyerdan, Redalish, Strago, Vilom, Watong</set>
+      <set name="names" type="female">Ahlana, Elmi, Hanni, Irroa, Lakaia, Meian, Neirin, Ohrila, Raini, Sedlani, Sheilah, Viyana, Weeva</set>
+      <set name="names" type="neutral">Alekhan, Belnani, Halansa, Jerivahn, Mahni, Narene, Rantloa, Songna, Weivam</set>
+      <set name="names-format">{{name}}</set>
+      <set name="height" modifier="2d8">4'4"</set>
+      <set name="weight" modifier="2d4">90 lb.</set>
+    </setters>
+    <rules>
+      <stat name="wisdom" value="2" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_VANOX" />
+      <grant type="Language" id="ID_RUNETERRA_LANGUAGE_VASTAYAN" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_INNATE_SHAPECHANGER" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_KNOWLEDGE_OF_WILD" />
+      <select type="Sub Race" name="Vastaya Subrace" supports="Vastaya Runeterra" />
+    </rules>
+  </element>
+
+  <element name="Innate Shapechanger" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_INNATE_SHAPECHANGER">
+    <description><p>You can cast the 2nd-level spell Alter Self without expending a spell slot. Once per long rest.</p></description>
+    <sheet usage="1/Long Rest"><description>Cast Alter Self (2nd-level) without expending a spell slot.</description></sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_ALTER_SELF" spellcasting="Race" known="true" />
+    </rules>
+  </element>
+  <element name="Knowledge of the Wild" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_KNOWLEDGE_OF_WILD">
+    <description><p>Proficiency in Nature and Survival.</p></description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+    </rules>
+  </element>
+
+  <!-- Landwalker Tribes -->
+  <element name="Landwalker Tribes" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_VASTAYA_LANDWALKER">
+    <supports>Vastaya Runeterra</supports>
+    <description>
+      <p>Vastaya who tread the earth — the most numerous vastaya, including the Fauhwoon, Lhotlan, and Shimon tribes.</p>
+      <p><strong>Ability Score Increase.</strong> Strength +1.</p>
+      <p><strong>Climbing Speed.</strong> 30 feet.</p>
+      <p><strong>Innate Spellcasting.</strong> You know the Druidcraft cantrip.</p>
+      <p><strong>Mask of the Wild.</strong> Can attempt to hide when only slightly obscured by foliage, tree bark, or rock walls.</p>
+      <p><strong>Speak with Small Beasts.</strong> Communicate simple ideas with Small or smaller beasts through sounds and gestures.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <stat name="innate speed:climb" value="30" bonus="base" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_MASK_WILD_LANDWALKER" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_SPEAK_SMALL_BEASTS" />
+      <grant type="Spell" id="ID_PHB_SPELL_DRUIDCRAFT" spellcasting="Race" known="true" />
+    </rules>
+  </element>
+  <element name="Mask of the Wild (Landwalker)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_MASK_WILD_LANDWALKER">
+    <description><p>Can attempt to hide when only slightly obscured by foliage, tree bark, or rock walls.</p></description>
+    <sheet><description>Can hide when only slightly obscured by foliage, tree bark, or rock walls.</description></sheet>
+  </element>
+  <element name="Speak with Small Beasts" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_SPEAK_SMALL_BEASTS">
+    <description><p>Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts.</p></description>
+    <sheet><description>Communicate simple ideas with Small or smaller beasts through sounds and gestures.</description></sheet>
+  </element>
+
+  <!-- Tribes of the Sea -->
+  <element name="Tribes of the Sea" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_VASTAYA_SEA">
+    <supports>Vastaya Runeterra</supports>
+    <description>
+      <p>Aquatic vastaya — including the Marai, Makara, and Raylu — who thrive in Runeterra's oceans.</p>
+      <p><strong>Ability Score Increase.</strong> Charisma +1.</p>
+      <p><strong>Amphibious.</strong> Breathe on land and in water.</p>
+      <p><strong>Innate Spellcasting.</strong> You know the Shape Water cantrip.</p>
+      <p><strong>Swimming Speed.</strong> 30 feet.</p>
+      <p><strong>Sea Weapon Training.</strong> Proficiency with spears, tridents, and nets.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="charisma" value="1" />
+      <stat name="innate speed:swim" value="30" bonus="base" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_AMPHIBIOUS_VASTAYA" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SPEAR" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_TRIDENT" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_NET" />
+      <grant type="Spell" id="ID_XGTE_SPELL_SHAPE_WATER" spellcasting="Race" known="true" />
+    </rules>
+  </element>
+  <element name="Amphibious (Vastaya)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_AMPHIBIOUS_VASTAYA">
+    <description><p>You can breathe both air and water.</p></description>
+    <sheet><description>You can breathe on land and in water.</description></sheet>
+  </element>
+
+  <!-- Tribes of the Sky -->
+  <element name="Tribes of the Sky" type="Sub Race" source="Races of Runeterra" id="ID_RUNETERRA_SUBRACE_VASTAYA_SKY">
+    <supports>Vastaya Runeterra</supports>
+    <description>
+      <p>Vastaya who dwell in the skies — including the Besheb, Strig, and Chyra tribes.</p>
+      <p><strong>Ability Score Increase.</strong> Dexterity +1.</p>
+      <p><strong>Innate Spellcasting.</strong> You know the Gust cantrip.</p>
+      <p><strong>Talons.</strong> Natural weapon unarmed strikes dealing 1d4+DEX slashing damage.</p>
+      <p><strong>Wings.</strong> Flying speed of 30 feet. Must be in a wide enough space for your wingspan (2x your height). Cannot fly in ill-fitting armor or with a non-tailored backpack.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="dexterity" value="1" />
+      <stat name="innate speed:fly" value="30" bonus="base" />
+      <grant type="Racial Trait" id="ID_RUNETERRA_RACIAL_TRAIT_TALONS_SKY" />
+      <grant type="Spell" id="ID_XGTE_SPELL_GUST" spellcasting="Race" known="true" />
+    </rules>
+  </element>
+  <element name="Talons (Tribes of the Sky)" type="Racial Trait" source="Races of Runeterra" id="ID_RUNETERRA_RACIAL_TRAIT_TALONS_SKY">
+    <description><p>You have talons that serve as natural weapons. Unarmed strikes deal 1d4+DEX slashing damage.</p></description>
+    <sheet><description>Unarmed strikes with talons deal 1d4 + DEX slashing damage.</description></sheet>
+  </element>
+
+</elements>
