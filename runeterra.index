@@ -6,8 +6,9 @@
     author="Isa (@orkidian)"
     website=""
   />
-  <update version="1.2.1" url="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/runeterra.index" />
+  <update version="1.2.1" url="https://raw.githubusercontent.com/SavernTheAnarchist/runeterra-races/main/runeterra.index" />
   <files>
-    <file name="runeterra-races.xml" url="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/runeterra-races.xml" />
+    <file name="runeterra-races.xml" url="https://raw.githubusercontent.com/SavernTheAnarchist/runeterra-races/main/runeterra-races.xml" />
   </files>
 </index>
+
